@@ -8,13 +8,15 @@ import random as rand
 plt.rcParams['figure.figsize'] = (12.0, 9.0)
 
 # Step 1 -- Plot data
+# read the features and labels from file
 input_data = open("input_data", "r")
 output_data = open("output_data", "r")
-X = input_data.read().split('\n')
+# parse the input stream by newline characters
+X = input_data.read().split('\n') 
 Y = output_data.read().split('\n')
 X.remove('')
 Y.remove('')
-
+# Our parsed and ready data
 n_X = [float(i) for i in X]
 n_Y = [float(i) for i in Y]
 
